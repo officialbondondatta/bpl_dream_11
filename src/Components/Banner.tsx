@@ -3,7 +3,7 @@ import BannerImage from "../assets/banner-main.png"
 const Banner = () => {
     return (
 
-        <div className="py-20 rounded-3xl bg-[linear-gradient(to_top_right,#818cf8_0%,#151515_40%,#151515_65%,#fda4af_100%)] flex items-center flex-col gap-5 justify-center p-5 text-center container mx-auto mt-5">
+        <section className="py-20 rounded-3xl bg-[linear-gradient(to_top_right,#818cf8_0%,#151515_40%,#151515_65%,#fda4af_100%)] flex items-center flex-col gap-5 justify-center p-5 text-center container mx-auto mt-5">
             <div>
                 <img src={BannerImage} alt="banner" />
             </div>
@@ -19,7 +19,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
     );
 };
