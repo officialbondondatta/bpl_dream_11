@@ -1,9 +1,10 @@
-
 function App() {
 
   return (
     <>
-      BPL Dream 11
+      <h1 className="text-orange-400 text-center mt-50">
+        BPL Dream 11 <button className="btn btn-success">Success</button>
+      </h1>
     </>
   )
 }
