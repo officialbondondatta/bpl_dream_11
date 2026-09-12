@@ -3,7 +3,7 @@ import type { IPlayerPromiseProps } from "../../types/types";
 import AvailablePlayers from "./AvailablePlayers";
 import SelectedPlayers from "./SelectedPlayers";
 
-const Players = ({ playerDataPromise }: IPlayerPromiseProps) => {
+const Players = ({ playerDataPromise, coin, setCoin }: IPlayerPromiseProps) => {
     const playersData = use(playerDataPromise)
     const [buttonType, setButtonType] = useState("available")
 
@@ -23,7 +23,7 @@ const Players = ({ playerDataPromise }: IPlayerPromiseProps) => {
             <div className="grid grid-cols-3 gap-10">
                 {
                     buttonType === "available" ?
-                        <AvailablePlayers availablePlayers={playersData}></AvailablePlayers>
+                        <AvailablePlayers coin={coin} setCoin={setCoin} availablePlayers={playersData}></AvailablePlayers>
                         :
                         <SelectedPlayers></SelectedPlayers>
                 }
