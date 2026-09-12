@@ -6,15 +6,17 @@ interface IPlayerProps {
     availablePlayers: IPlayer[],
     coin: number,
     setCoin: Dispatch<SetStateAction<number>>
+    selectedPlayers: IPlayer[],
+    setSelectedPlayers: Dispatch<SetStateAction<IPlayer[]>>
 }
 
-const AvailablePlayers = ({ availablePlayers, coin, setCoin }: IPlayerProps) => {
+const AvailablePlayers = ({ availablePlayers, coin, setCoin, selectedPlayers, setSelectedPlayers }: IPlayerProps) => {
 
     return (
         <>
             {
                 availablePlayers.map((player, index) => (
-                    <PlayerCard key={index} coin={coin} setCoin={setCoin} player={player}></PlayerCard>
+                    <PlayerCard selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} key={index} coin={coin} setCoin={setCoin} player={player}></PlayerCard>
                 ))
             }
         </>

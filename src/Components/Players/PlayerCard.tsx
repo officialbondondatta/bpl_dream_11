@@ -6,16 +6,19 @@ import { toast } from "react-toastify";
 export interface IPlayerCardProps {
     player: IPlayer,
     coin: number,
-    setCoin: Dispatch<SetStateAction<number>>
+    setCoin: Dispatch<SetStateAction<number>>,
+    selectedPlayers: IPlayer[],
+    setSelectedPlayers: Dispatch<SetStateAction<IPlayer[]>>
 }
-const PlayerCard = ({ player, coin, setCoin }: IPlayerCardProps) => {
+const PlayerCard = ({ player, coin, setCoin, selectedPlayers, setSelectedPlayers }: IPlayerCardProps) => {
     const [isSelected, setIsSelected] = useState<boolean>(false)
     const handleSelectedPlayer = (player: IPlayer) => {
         const newCoin = coin - player.price
         if (newCoin >= 0) {
-            setCoin(newCoin)
-            toast.success("Player Selected")
-            setIsSelected(true)
+            setCoin(newCoin);
+            toast.success("Player Selected");
+            setIsSelected(true);
+            setSelectedPlayers([...selectedPlayers, player]);
         }
         else {
             toast.error("not enough coins")
