@@ -9,8 +9,8 @@ const Players = ({ playerDataPromise }: IPlayerPromiseProps) => {
             <div className="flex justify-between">
                 <h2 className="font-bold text-xl">Available Players</h2>
                 <div className="flex">
-                    <button className="btn btn-success rounnded-r-0 border-slate-300 shadow-none px-7 border-r-0">Available</button>
-                    <button className="btn btn-success shadow-none border-slate-300 rounded-l-0 px-7 bg-white border-l-0">Selected</button>
+                    <button className="btn btn-success rounded-r-none px-7">Available</button>
+                    <button className="btn  rounded-l-none px-7">Selected</button>
                 </div>
             </div>
 
