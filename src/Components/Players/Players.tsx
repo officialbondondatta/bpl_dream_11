@@ -21,7 +21,7 @@ const Players = ({ playerDataPromise, coin, setCoin }: IPlayerPromiseProps) => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-3 gap-10">
+            <div className="grid lg:grid-cols-3 grid-cols-1 gap-10">
                 {
                     buttonType === "available" ?
                         <AvailablePlayers selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} coin={coin} setCoin={setCoin} availablePlayers={playersData}></AvailablePlayers>
